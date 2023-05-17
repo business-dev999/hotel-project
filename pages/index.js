@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
+
 import { Work_Sans, Sarabun } from "@next/font/google";
 
 const workSans = Work_Sans({
@@ -16,7 +18,30 @@ const sarabun = Sarabun({
 export default function Home() {
   return (
     <>
-      Sarabun Regular 400 at 32px <br />
+      <div className="navbar bg-base-100">
+        <div className="flex-1">
+          <a className="btn btn-ghost normal-case text-xl">My Website</a>
+        </div>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* <div className="hero-image">
+        <div className="hero-text">
+          <h1 styles="font-size: 50px;">I am Developer</h1>
+        </div>
+      </div> */}
+      {/* Sarabun Regular 400 at 32px <br />
       <p className={sarabun.className} style={{ fontSize: 32, color: "blue" }}>
         ทุกคนย่อมมีสิทธิในความเสมอภาคอย่างเต็มที่ในการได้รับการพิจารณาคดีที่เป็นธรรมและเปิดเผยจากศาลที่อิสระและไม่ลำเอียง
         ในการพิจารณากำหนดสิทธิและหน้าที่ของตนและข้อกล่าวหาอาญาใดต่อตน
@@ -92,7 +117,7 @@ export default function Home() {
         โดยที่เป็นการจำเป็นที่สิทธิมนุษยชนควรได้รับความคุ้มครองโดยหลักนิติธรรม
         ถ้าจะไม่บังคับให้คนต้องหันเข้าหาการลุกขึ้นต่อต้านทรราชและการกดขี่เป็นวิถีทางสุดท้าย
         โดยที่เป็นการจำเป็นที่จะส่งเสริมพัฒนาการแห่งความสัมพันธ์ฉันมิตรระหว่างชาติต่างๆ
-      </p>
+      </p> */}
     </>
   );
 }
